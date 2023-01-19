@@ -47,7 +47,7 @@ export const listPosts = async (
       }
       let startIndex = limit * (page - 1);
       let pagedPosts = resultPosts.slice(startIndex, startIndex + limit);
-      resolve({ posts: pagedPosts, total: allpost.length });
+      resolve({ posts: pagedPosts, total: resultPosts.length });
     } else {
       reject([]);
     }
